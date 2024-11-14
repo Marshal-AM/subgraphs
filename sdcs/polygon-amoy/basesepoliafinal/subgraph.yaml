@@ -1,0 +1,69 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: SUSDC
+    network: polygon-amoy
+    source:
+      abi: SUSDC
+      address: "0x6EEBe75caf9c579B3FBA9030760B84050283b50a"
+      startBlock: 2644307
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Transfer
+      abis:
+        - name: SUSDC
+          file: ./abis/SUSDC.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/susdc.ts
+
+  - kind: ethereum
+    name: Token
+    network: polygon-amoy
+    source:
+      abi: Token
+      address: "0x1616d425Cd540B256475cBfb604586C8598eC0FB"
+      startBlock: 8231591
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - TokenTransfer
+      abis:
+        - name: Token
+          file: ./abis/Token.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/token.ts
+
+  - kind: ethereum
+    name: Contract
+    network: polygon-amoy
+    source:
+      abi: Contract
+      address: "0x52eF3d68BaB452a294342DC3e5f464d7f610f72E"
+      startBlock: 14382967
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - ContractTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/contract.ts
+

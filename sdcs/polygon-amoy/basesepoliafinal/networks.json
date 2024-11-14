@@ -1,0 +1,32 @@
+{
+  "base-sepolia": {
+    "SUSDC": {
+      "address": "0x5dEaC602762362FE5f135FA5904351916053cF70",
+      "startBlock": 4774235
+    },
+    "WETH": {
+      "address": "0x323e78f944A9a1FcF3a10efcC5319DBb0bB6e673",
+      "startBlock" : 17874228
+    },
+    "Contract": {
+      "address": "0x1BDD24840e119DC2602dCC587Dd182812427A5Cc",
+      "startBlock" : 14889775
+    }
+  },
+  "polygon-amoy":{
+    "SUSDC": {
+      "address": "0x6EEBe75caf9c579B3FBA9030760B84050283b50a",
+      "startBlock": 2644307
+    },
+    "Token": {
+      "address": "0x1616d425Cd540B256475cBfb604586C8598eC0FB",
+      "startBlock": 	8231591
+    },
+    "Contract": {
+      "address": "0x52eF3d68BaB452a294342DC3e5f464d7f610f72E",
+      "startBlock": 14382967	
+    }
+
+  }
+  
+}

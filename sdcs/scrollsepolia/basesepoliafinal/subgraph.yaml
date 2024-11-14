@@ -1,0 +1,64 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: SUSDC
+    network: scroll-sepolia
+    source:
+      abi: SUSDC
+      address: "0x690000EF01deCE82d837B5fAa2719AE47b156697"
+      startBlock: 813796
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Transfer
+      abis:
+        - name: SUSDC
+          file: ./abis/SUSDC.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/susdc.ts
+  - kind: ethereum
+    name: Token
+    network: scroll-sepolia
+    source:
+      abi: Token
+      address: "0x3c725F9622779c4Aa225bED987056e32326f8094"
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - TokenTransfer
+      abis:
+        - name: Token
+          file: ./abis/Token.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/token.ts
+  - kind: ethereum
+    name: Contract
+    network: scroll-sepolia
+    source:
+      abi: Contract
+      address: "0xf4741faD965Af66B6bd3C6DF677B005d621f0aDc"
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - ContractTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/contract.ts

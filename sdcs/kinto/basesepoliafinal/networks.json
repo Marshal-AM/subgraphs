@@ -1,0 +1,16 @@
+{
+  "kinto": {
+    "SUSDC": {
+      "address": "0x05DC0010C9902EcF6CBc921c6A4bd971c69E5A2E",
+      "startBlock": 252133
+    },
+    "Token": {
+      "address": "0xA1F63668D823E65e641DDD91cAB184dc3038eBE3",
+      "startBlock" : 221618
+    },
+    "Contract": {
+      "address": "0x0E7000967bcB5fC76A5A89082db04ed0Bf9548d8",
+      "startBlock" : 256388
+    }
+  }
+}

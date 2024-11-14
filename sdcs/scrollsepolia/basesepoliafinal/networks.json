@@ -1,0 +1,17 @@
+{
+  "scroll-sepolia": {
+    "SUSDC": {
+      "address": "0x690000EF01deCE82d837B5fAa2719AE47b156697",
+      "startBlock": 813796
+    },
+    "Token": {
+      "address": "0x3c725F9622779c4Aa225bED987056e32326f8094"
+    },
+    "Contract": {
+      "address": "0xf4741faD965Af66B6bd3C6DF677B005d621f0aDc"
+    }
+  }
+
+
+  
+}

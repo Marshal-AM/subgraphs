@@ -1,0 +1,16 @@
+{
+  "base-sepolia": {
+    "SUSDC": {
+      "address": "0x5dEaC602762362FE5f135FA5904351916053cF70",
+      "startBlock": 4774235
+    },
+    "Token": {
+      "address": "0x323e78f944A9a1FcF3a10efcC5319DBb0bB6e673",
+      "startBlock" : 17874228
+    },
+    "Contract": {
+      "address": "0x1BDD24840e119DC2602dCC587Dd182812427A5Cc",
+      "startBlock" : 14889775
+    }
+  }
+}
